@@ -1,0 +1,56 @@
+.nav-container {
+  position: sticky !important;
+  top: 0;
+  z-index: 222;
+  background-color: rgb(252, 252, 252);
+  /* background-color: rgba(0, 0, 0, 0.644) !important; */
+}
+
+.logo-color {
+  color: #00e6e6 !important;
+}
+
+.btn-style {
+  border-radius: 15px !important;
+  width: 78px !important;
+  font-size: 16px !important;
+}
+
+.btn-style:focus {
+  box-shadow: none !important;
+}
+.cart-box {
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-box {
+  width: 100%;
+}
+.menuText {
+  border-bottom: #fff !important;
+}
+.menuText:hover {
+  color: #00e6e6 !important;
+  border-bottom: 1px solid #00e6e6 !important;
+}
+
+.loginStyle,
+.loginText {
+  transition: 0.4s;
+}
+.loginStyle:hover {
+  background-color: #00e6e6 !important;
+  transition: 0.4s;
+}
+.loginStyle:hover .loginText {
+  color: #fff !important;
+  transition: 0.4s;
+}
+.sign-btn {
+  background-color: #00e6e6 !important;
+}

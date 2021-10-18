@@ -1,0 +1,78 @@
+.carouselStyle {
+  width: 100%;
+  height: 100vh;
+}
+.carousel-img {
+  width: 100%;
+  height: 100vh;
+}
+
+.carouselCaption {
+  margin-bottom: 70px !important;
+}
+.carouselHeading {
+  font-size: 4.1rem;
+  line-height: 72px;
+  font-weight: 700;
+}
+.carouselDescription {
+  font-weight: 600;
+  margin-top: 20px;
+}
+.carousel-btn {
+  width: 150px !important;
+  height: 50px !important;
+  font-weight: 600 !important;
+}
+.carousel-btn:focus {
+  box-shadow: none !important;
+}
+.btn-one {
+  background-color: #00e6e6 !important;
+  border: 1.8px solid #00e6e6 !important;
+  margin-right: 10px !important;
+  color: rgb(251, 255, 255) !important;
+}
+.btn-one:hover {
+  background-color: #5c6161b4 !important;
+  transition: 0.5s;
+}
+
+.btn-two {
+  border: 1.8px solid #00e6e6 !important;
+  background-color: #5c6161b4 !important;
+  margin-left: 10px !important;
+}
+.btn-two:hover {
+  background-color: #00e6e6 !important;
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 576px) {
+  .carouselCaption {
+    margin-bottom: 100px !important;
+  }
+  .carouselStyle {
+    width: 100%;
+    height: 75vh;
+  }
+  .carousel-img {
+    width: 100%;
+    height: 75vh;
+  }
+  .carouselHeading {
+    font-size: 2rem;
+    line-height: normal;
+    font-weight: 600;
+  }
+  .carouselDescription {
+    font-weight: 500;
+    font-size: 15px;
+  }
+
+  .carousel-btn {
+    width: 130px !important;
+    height: 40px !important;
+    font-weight: 600 !important;
+  }
+}
