@@ -4,8 +4,14 @@ import "./Banner.css";
 import banner1 from "../../../images/Banner/banner1.jpg";
 import banner2 from "../../../images/Banner/banner2.jpg";
 import banner3 from "../../../images/Banner/banner3.jpg";
+import { useHistory } from "react-router";
 
 const Banner = () => {
+  const history = useHistory();
+
+  const handleAboutBtn = () => {
+    history.push("/about");
+  };
   return (
     <div>
       <Carousel className="carouselStyle " interval={2500} indicators={false}>
@@ -23,10 +29,16 @@ const Banner = () => {
               Deeper appreciation and concern for our client’s investments and
               the human experience.
             </p>
-            <dsv>
-              <Button className="carousel-btn btn-one "> About us</Button>
+            <div>
+              <Button
+                onClick={handleAboutBtn}
+                className="carousel-btn btn-one "
+              >
+                {" "}
+                About us
+              </Button>
               <Button className="carousel-btn btn-two "> Book </Button>
-            </dsv>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -44,10 +56,10 @@ const Banner = () => {
               High professional doctors level. All specialists have extensive
               practical experience and training courses.
             </p>
-            <dsv>
+            <div>
               <Button className="carousel-btn btn-one "> About us</Button>
               <Button className="carousel-btn btn-two ">Book</Button>
-            </dsv>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
@@ -65,10 +77,10 @@ const Banner = () => {
               Only modern and best equipment advanced medical technologies and
               innovative diagnosis.
             </p>
-            <dsv>
+            <div>
               <Button className="carousel-btn btn-one"> About us</Button>
               <Button className="carousel-btn btn-two"> Book</Button>
-            </dsv>
+            </div>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>

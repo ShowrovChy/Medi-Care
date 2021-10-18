@@ -1,44 +1,46 @@
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import "./Footer.css";
 import { Button, Col, Row } from "react-bootstrap";
-import logo from "../../../images/Logo (2).png";
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
+
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { CgFacebook, CgInstagram, CgTwitter, CgYoutube } from "react-icons/cg";
+// import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     <div className="pt-5  mt-5">
       <Row md={4} xs={1} className="upperFooterDiv px-5 ">
-        <Col>
+        <Col className="mt-3">
           <div>
-            <img className="" width="180" height="60" src={logo} alt="" />
+            <h2 className="text-info">MediCare</h2>
           </div>
           <p className=" mt-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-            deleniti exercitationem iure consequatur aliquid ut officiis
-            eligendi? Temporibus, explicabo minima.
+            The MediCare acknowledges the traditional owners of the land on
+            which our five sites are located throughout Victoria. We recognize
+            their strength and resilience and pay our respects to their Elders
+            past and present.
           </p>
 
           <div className="d-flex">
             <div className="iconDiv">
-              <FontAwesomeIcon className="footerIcon" icon={faFacebookF} />
+              <h2 className="footerIcon">
+                <CgFacebook />
+              </h2>
             </div>
             <div className="iconDiv">
-              <FontAwesomeIcon className="footerIcon" icon={faTwitter} />
-            </div>{" "}
+              <h2 className="footerIcon">
+                <CgTwitter />
+              </h2>
+            </div>
             <div className="iconDiv">
-              <FontAwesomeIcon className="footerIcon" icon={faInstagram} />
-            </div>{" "}
+              <h2 className="footerIcon">
+                <CgYoutube />
+              </h2>
+            </div>
             <div className="iconDiv">
-              <FontAwesomeIcon className="footerIcon" icon={faYoutube} />
+              <h2 className="footerIcon">
+                <CgInstagram />
+              </h2>
             </div>{" "}
           </div>
 
@@ -57,33 +59,33 @@ const Footer = () => {
           </form> */}
         </Col>
         <Col className="mt-4">
-          <h4 className="text-danger mb-4">Services</h4>
+          <h4 className="text-info mb-4">Services</h4>
           <ul className="footer-list">
             <li>Support</li>
             <li>
-              <HashLink to="/home#about" className="footerLink">
+              {/*    <HashLink to="/home#about" className="footerLink">
                 About
-              </HashLink>
+              </HashLink> */}
             </li>
             <li>
-              <HashLink to="/home#chefs" className="footerLink">
+              {/*     <HashLink to="/home#chefs" className="footerLink">
                 Chefs
-              </HashLink>
+              </HashLink> */}
             </li>
             <li>Blogs</li>
             <li>Privacy Policy</li>
           </ul>
         </Col>
         <Col className="mt-4">
-          <h4 className="text-danger">Quick Links</h4>
+          <h4 className="text-info">Quick Links</h4>
           <ul className="footer-list">
             <li>
-              <Link as={HashLink} to="/services" className="footerLink">
+              {/*     <Link as={HashLink} to="/services" className="footerLink">
                 Services
-              </Link>
+              </Link> */}
             </li>
-            <li>Food Collection</li>
-            <li>Online Order</li>
+            <li>Specialist Doctors</li>
+            <li>Online Booking</li>
             <li>Blogs</li>
             <li>
               <Link to="/contact" className="footerLink">
@@ -93,19 +95,19 @@ const Footer = () => {
           </ul>
         </Col>
         <Col className="mt-4">
-          <h4 className="text-danger">Contact Us</h4>
+          <h4 className="text-info">Contact Us</h4>
           <ul className="footer-list">
             <li>+1 1634 53 759</li>
             <li>+5 1554 56 858</li>
-            <li>info@mealspicy.com</li>
-            <li>hello@mealspicy.com</li>
+            <li>info@medicare.com</li>
+            <li>hello@medicare.com</li>
             <li>Br1. 26/B Street, New York, USA</li>
           </ul>
         </Col>
       </Row>
       <div className="lowerFooterDiv mt-4">
         <p className="text-center">
-          <small>Copyright @2021. All Rights Reserved By meal spicy</small>
+          <small>Copyright @2021. All Rights Reserved By medicare</small>
         </p>
       </div>
     </div>

@@ -2,8 +2,7 @@
   position: sticky !important;
   top: 0;
   z-index: 222;
-  background-color: rgb(252, 252, 252);
-  /* background-color: rgba(0, 0, 0, 0.644) !important; */
+  background-color: whitesmoke;
 }
 
 .logo-color {

@@ -1,0 +1,64 @@
+.serviceColumn {
+  border-radius: 15px;
+}
+
+.serviceCard {
+  height: 425px;
+  position: relative;
+  border-radius: 15px;
+  border: 1px solid #00e6e6;
+}
+
+.serviceShortDesc {
+  text-align: justify;
+}
+.imgDiv {
+  width: 100%;
+  overflow: hidden;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.serviceImg {
+  width: 100%;
+  transition: 0.5s;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.serviceImg:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.serviceTitle {
+  color: rgb(69, 184, 219) !important;
+}
+.card-desc {
+  padding: 0 7px;
+}
+.serviceLinkDiv {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  padding: 0 7px;
+  position: absolute;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+.consult-btn {
+  height: 50px;
+  transition: 0.5s;
+  color: rgb(19, 19, 19) !important;
+  border: 1.8px solid #00e6e6 !important;
+  background-color: transparent !important;
+}
+.consult-btn:hover {
+  background-color: #00e6e6 !important;
+  color: #fff !important;
+  transition: 0.5s;
+}
+.arrowLink {
+  color: #00e6e6 !important;
+}
+.arrowLink:hover {
+  color: #0d9797 !important;
+}

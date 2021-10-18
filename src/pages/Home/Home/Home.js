@@ -1,9 +1,13 @@
 import React from "react";
+import Banner from "../Banner/Banner";
+import Services from "../Services/Services";
 
 const Home = () => {
+  window.scroll(0, 0);
   return (
     <div>
-      <h1>this is home. welcome to home</h1>
+      <Banner></Banner>
+      <Services></Services>
     </div>
   );
 };
