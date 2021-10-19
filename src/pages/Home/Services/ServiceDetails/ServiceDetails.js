@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import "./ServiceDetails.css";
-
+import { CgArrowLongRight } from "react-icons/cg";
 const ServiceDetails = () => {
   const { serviceId } = useParams();
   const [data, setData] = useState([]);
@@ -24,38 +24,48 @@ const ServiceDetails = () => {
       <div className="serviceBanner"></div>
 
       <div className="container">
-        <Row className="">
-          <Col md={9}>
+        <Row className="mt-5">
+          <Col md={9} className="">
             <div>
-              <img src={matchedData?.image} alt="" />
+              <img
+                className="serviceDetailsImage"
+                src={matchedData?.image}
+                alt=""
+              />
             </div>
             <div>
-              <h1>{matchedData?.title}</h1>
-              <p className="detailsDescriptionStyle">
+              <h1 className="mt-4 text-info">{matchedData?.title}</h1>
+              <p className="detailsDescriptionStyle mt-4 ">
                 {matchedData?.description}
               </p>
             </div>
           </Col>
-          <Col md={3}>
-            <h2>All Services</h2>
-            <ul>
+          <Col md={3} className="ps-4 ">
+            <h2>ALL SERVICES</h2>
+            <ul className="serviceList">
               <li>
-                <Link>Pathology</Link>
+                <CgArrowLongRight />
+                <Link to="/">PATHOLOGY</Link>
               </li>
               <li>
-                <Link>Radiology</Link>
+                <CgArrowLongRight />
+                <Link to="/">RADIOLOGY</Link>
               </li>
               <li>
-                <Link>Cancer Surgery</Link>
+                <CgArrowLongRight />
+                <Link to="/">CANCER SURGERY</Link>
               </li>
               <li>
-                <Link>Radiation Therapy</Link>
+                <CgArrowLongRight className="icon" />
+                <Link to="/">RADIATION THERAPY</Link>
               </li>
               <li>
-                <Link>Dental Oncology</Link>
+                <CgArrowLongRight />
+                <Link to="/">DENTAL ONCOLOGY</Link>
               </li>
               <li>
-                <Link>Medical Oncology</Link>
+                <CgArrowLongRight />
+                <Link to="/">MEDICAL ONCOLOGY</Link>
               </li>
             </ul>
           </Col>

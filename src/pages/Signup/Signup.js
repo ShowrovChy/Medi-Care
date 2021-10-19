@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import "./Signup.css";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState();
-  const [name, setName] = useState();
   const { handleUserRegistration, handleUserName, error } = useAuth();
 
-  const handleName = (e) => {
-    setName(e.target.value);
-    handleUserName(name);
-  };
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
@@ -30,15 +26,6 @@ const Signup = () => {
         onSubmit={handleRegistration}
         className="form-container mx-auto mt-5"
       >
-        <Form.Group className="mb-3" controlId="formBasicName">
-          <Form.Control
-            onBlur={handleName}
-            className="loginInput border-top-0 border-end-0 border-start-0 rounded-0"
-            type="text"
-            placeholder="Enter name"
-            // required
-          />
-        </Form.Group>
         <Form.Group className="mb-3 mt-4" controlId="formBasicEmail">
           <Form.Control
             onBlur={handleEmail}
@@ -58,9 +45,17 @@ const Signup = () => {
             required
           />
         </Form.Group>
-        <Button className="loginBtn  mt-4" variant="info" type="submit">
+        <Button className="loginBtn  mt-4 mb-4" variant="info" type="submit">
           Sign up
         </Button>
+        <hr />
+        <p>
+          Already have an account?
+          <Link to="/login" className="ms-2">
+            {" "}
+            Log in
+          </Link>
+        </p>
         <p className="text-danger my-2"> {error}</p>
       </Form>
     </div>

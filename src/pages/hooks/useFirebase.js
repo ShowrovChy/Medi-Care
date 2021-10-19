@@ -6,7 +6,6 @@ import {
   onAuthStateChanged,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
-  updateProfile,
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
@@ -81,13 +80,6 @@ const useFirebase = () => {
       });
   };
 
-  // handle user name
-  const handleUserName = (name) => {
-    updateProfile(auth.currentUser, { displayName: { name } })
-      .then(() => {})
-      .catch(() => {});
-  };
-
   //  login with email password
   const handleUserLoginWithEmail = (email, password) => {
     signInWithEmailAndPassword(auth, email, password);
@@ -110,7 +102,6 @@ const useFirebase = () => {
     logInUsingGithub,
     handleUserRegistration,
     handleUserLoginWithEmail,
-    handleUserName,
     logOut,
   };
 };

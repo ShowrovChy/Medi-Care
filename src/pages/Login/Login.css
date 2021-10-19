@@ -4,7 +4,7 @@
 }
 .form-container {
   width: 30%;
-  padding: 30px;
+  padding: 20px 30px 15px;
 }
 .loginInput {
   border-bottom: 2px solid #00e6e6 !important;
@@ -15,6 +15,20 @@
 
 .loginBtn {
   width: 100%;
+}
+.link-btn {
+  width: 150px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.iconStyle {
+  width: 40px;
+  margin-right: 4px;
+}
+.gg-icon {
+  width: 37px;
+  margin-right: 4px;
 }
 
 @media only screen and (max-width: 576px) {

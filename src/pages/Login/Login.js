@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
 import useAuth from "../hooks/useAuth";
 import "./Login.css";
-
+import google from "../../images/icon/google.png";
+import github from "../../images/icon/github.png";
+import { Link } from "react-router-dom";
 const Login = () => {
   const {
     logInUsingGoogle,
@@ -55,17 +57,31 @@ const Login = () => {
         <Button className="loginBtn mt-4" variant="info" type="submit">
           Log in
         </Button>
+        <hr />
+        <p>
+          Already have an account?
+          <Link to="/signup" className="ms-2">
+            {" "}
+            Sign up
+          </Link>
+        </p>
       </Form>
       <div>
         <h3 className="orStyle text-center">-----------or-----------</h3>
-        <div className="text-center mt-4">
+        <div className="text-center mt-3">
           <Button
             onClick={logInUsingGoogle}
-            className="bg-primary border-0 me-4"
+            className="bg-primary border-0 mx-1 p-0 link-btn"
           >
+            {" "}
+            <img className="iconStyle gg-icon" src={google} alt="" />
             Google login
           </Button>
-          <Button onClick={logInUsingGithub} className="bg-dark border-0 ms-4">
+          <Button
+            onClick={logInUsingGithub}
+            className="bg-dark border-0 mx-1  p-0 link-btn"
+          >
+            <img className="iconStyle" src={github} alt="" />
             Github login
           </Button>
           <p className="text-danger my-3"> {error}</p>

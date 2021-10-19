@@ -1,9 +1,33 @@
 .detailsDescriptionStyle {
   text-align: justify;
+  color: rgb(44, 44, 44);
+  font-size: 17px;
+  line-height: 28px;
 }
 .serviceBanner {
   background-image: url("../../../../images/serviceDetailsBanner.jpg");
   width: 100%;
   height: 50vh;
   background-size: cover;
+}
+.serviceDetailsImage {
+  width: 100%;
+}
+.serviceList {
+  list-style: none;
+  padding-left: 0;
+}
+.serviceList > li {
+  margin-bottom: 15px;
+}
+.serviceList > li > a {
+  color: rgb(44, 44, 44);
+  text-decoration: none;
+  margin-left: 3px;
+}
+.serviceList > li:hover a {
+  color: #0ec4c4;
+  border-bottom: 2px solid #00e6e6;
+  margin-left: 10px;
+  transition: 0.5s;
 }
