@@ -59,7 +59,7 @@ const Login = () => {
         </Button>
         <hr />
         <p>
-          Already have an account?
+          New here?
           <Link to="/signup" className="ms-2">
             {" "}
             Sign up
