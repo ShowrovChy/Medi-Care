@@ -1,7 +1,10 @@
 .contact-container {
   margin-top: 100px;
 }
-
+/* .contact-wrapper {
+  width: 100%;
+  margin: auto;
+} */
 .contact-div {
   height: 250px;
   color: rgb(37, 37, 37);

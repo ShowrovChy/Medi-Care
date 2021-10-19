@@ -2,8 +2,10 @@ import React from "react";
 import "./Header.css";
 import { Nav, Navbar, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import useAuth from "../../hooks/useAuth";
+import { BiUserCircle } from "react-icons/bi";
 const Header = () => {
+  const { user, logOut } = useAuth();
   return (
     <div className=" nav-container container-fluid ">
       <Navbar className="  container" expand="lg">
@@ -31,16 +33,39 @@ const Header = () => {
             >
               Contact
             </Nav.Link>
-
-            <Button className="btn-style loginStyle  bg-transparent  border-info ms-3 mt-1">
-              <Nav.Link
-                as={Link}
-                to="/login"
-                className=" p-0 text-dark loginText "
-              >
-                {" "}
-                Login
-              </Nav.Link>
+            {user?.email && (
+              <span className="d-flex align-items-center">
+                <span className="fs-4 text-info">
+                  <BiUserCircle />
+                </span>
+                <span>
+                  <em>{user.displayName || <b> Name unavailable</b>}</em>
+                </span>
+              </span>
+            )}
+            <Button
+              onClick={logOut}
+              className="btn-style loginStyle  bg-transparent  border-info ms-3 mt-1"
+            >
+              {user.email ? (
+                <Nav.Link
+                  as={Link}
+                  to="/login"
+                  className=" p-0 text-dark loginText "
+                >
+                  {" "}
+                  Logout
+                </Nav.Link>
+              ) : (
+                <Nav.Link
+                  as={Link}
+                  to="/login"
+                  className=" p-0 text-dark loginText "
+                >
+                  {" "}
+                  Log in
+                </Nav.Link>
+              )}
             </Button>
             <Button className="btn-style  sign-btn  ms-3 mt-1  border-0">
               <Nav.Link as={Link} to="/signup" className=" text-white p-0">

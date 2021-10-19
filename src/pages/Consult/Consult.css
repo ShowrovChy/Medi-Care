@@ -1,0 +1,11 @@
+.consult-wrapper {
+  height: 100vh;
+  background-image: url("../../images/doctor.png");
+  padding: 0 !important;
+}
+.consult-text {
+  height: 200px;
+  background-color: rgba(15, 15, 15, 0.746);
+  height: 100%;
+  padding-top: 30px;
+}

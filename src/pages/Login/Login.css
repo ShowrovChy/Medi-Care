@@ -1,0 +1,27 @@
+.login-main-Container {
+  width: 100%;
+  height: 100vh;
+}
+.form-container {
+  width: 30%;
+  padding: 30px;
+}
+.loginInput {
+  border-bottom: 2px solid #00e6e6 !important;
+}
+.loginInput:focus {
+  box-shadow: none !important;
+}
+
+.loginBtn {
+  width: 100%;
+}
+
+@media only screen and (max-width: 576px) {
+  .form-container {
+    width: 100% !important;
+  }
+  .login-main-Container {
+    height: 100%;
+  }
+}

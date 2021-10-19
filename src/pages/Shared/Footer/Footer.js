@@ -9,7 +9,7 @@ import { CgFacebook, CgInstagram, CgTwitter, CgYoutube } from "react-icons/cg";
 const Footer = () => {
   return (
     <div className="pt-5  mt-5">
-      <Row md={4} xs={1} className="upperFooterDiv px-5 ">
+      <Row xs={1} md={2} lg={4} className="upperFooterDiv px-5 ">
         <Col className="mt-3">
           <div>
             <h2 className="text-info">MediCare</h2>
@@ -43,35 +43,17 @@ const Footer = () => {
               </h2>
             </div>{" "}
           </div>
-
-          {/*           <form className="footer-form mt-5 border bg-white  rounded-pill">
-            <input
-              className="email-field border-0 me-2"
-              type="email"
-              placeholder=" your email address "
-            />
-            <Button
-              className="email-btn bg-danger text-white rounded-circle  border-0  "
-              type="submit"
-            >
-              {<FontAwesomeIcon icon={faPaperPlane}></FontAwesomeIcon>}
-            </Button>
-          </form> */}
         </Col>
         <Col className="mt-4">
           <h4 className="text-info mb-4">Services</h4>
           <ul className="footer-list">
             <li>Support</li>
             <li>
-              {/*    <HashLink to="/home#about" className="footerLink">
+              <Link to="/about" className="footerLink">
                 About
-              </HashLink> */}
+              </Link>
             </li>
-            <li>
-              {/*     <HashLink to="/home#chefs" className="footerLink">
-                Chefs
-              </HashLink> */}
-            </li>
+
             <li>Blogs</li>
             <li>Privacy Policy</li>
           </ul>
@@ -79,11 +61,6 @@ const Footer = () => {
         <Col className="mt-4">
           <h4 className="text-info">Quick Links</h4>
           <ul className="footer-list">
-            <li>
-              {/*     <Link as={HashLink} to="/services" className="footerLink">
-                Services
-              </Link> */}
-            </li>
             <li>Specialist Doctors</li>
             <li>Online Booking</li>
             <li>Blogs</li>

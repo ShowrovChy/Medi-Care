@@ -6,7 +6,7 @@ const Contact = () => {
   window.scroll(0, 0);
   return (
     <div className="container contact-container">
-      <Row md={3} xs={1} className="g-5">
+      <Row md={2} xs={1} lg={3} className="g-5 contact-wrapper">
         <Col className="">
           <div className=" p-3 rounded-3  contact-div">
             <h4>POSTAL ADDRESS</h4>

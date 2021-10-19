@@ -11,9 +11,14 @@ const Services = () => {
     ).then((res) => res.json().then((data) => setServices(data)));
   }, []);
   return (
-    <div className="service-container container">
+    <div className="service-container ">
       <h1 className="service-heading text-center mb-5">Our Services</h1>
-      <Row md={3} xs={1} className="service-card-wrapper g-5">
+      <Row
+        xs={1}
+        md={2}
+        lg={3}
+        className="service-card-wrapper g-5 container mx-auto px-0"
+      >
         {services.map((service) => (
           <SingleService key={service.id} service={service}></SingleService>
         ))}
