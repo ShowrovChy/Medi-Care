@@ -6,9 +6,13 @@
   height: 425px;
   position: relative;
   border-radius: 15px;
-  border: 1px solid #00e6e6;
+  box-shadow: 0 0 9px rgb(187, 186, 186);
 }
-
+.serviceCard:hover {
+  box-shadow: 0 0 6px rgb(187, 186, 186);
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
 .serviceShortDesc {
   text-align: justify;
 }

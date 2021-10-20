@@ -67,12 +67,14 @@ const Header = () => {
                 </Nav.Link>
               )}
             </Button>
-            <Button className="btn-style  sign-btn  ms-3 mt-1  border-0">
-              <Nav.Link as={Link} to="/signup" className=" text-white p-0">
-                {" "}
-                Sign up
-              </Nav.Link>
-            </Button>
+            {!user.email && (
+              <Button className="btn-style  sign-btn  ms-3 mt-1  border-0">
+                <Nav.Link as={Link} to="/signup" className=" text-white p-0">
+                  {" "}
+                  Sign up
+                </Nav.Link>
+              </Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Navbar>
