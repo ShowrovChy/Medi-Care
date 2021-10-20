@@ -29,7 +29,7 @@ const Header = () => {
             <Nav.Link
               as={Link}
               to="/contact"
-              className=" mt-1 text-dark menuText"
+              className=" mt-1 text-dark menuText me-2"
             >
               Contact
             </Nav.Link>
@@ -38,7 +38,7 @@ const Header = () => {
                 <span className="fs-4 text-info">
                   <BiUserCircle />
                 </span>
-                <span>
+                <span className="ms-1">
                   <em>{user.displayName || <b> Name unavailable</b>}</em>
                 </span>
               </span>
