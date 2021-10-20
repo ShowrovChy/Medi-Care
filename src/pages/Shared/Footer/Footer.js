@@ -14,7 +14,7 @@ const Footer = () => {
           <div>
             <h2 className="text-info">MediCare</h2>
           </div>
-          <p className=" mt-4">
+          <p className=" mt-4 footer-desc">
             The MediCare acknowledges the traditional owners of the land on
             which our five sites are located throughout Victoria. We recognize
             their strength and resilience and pay our respects to their Elders

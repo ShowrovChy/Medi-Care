@@ -1,19 +1,8 @@
 .upperFooterDiv {
   width: 100%;
 }
-.footer-form {
-  width: 100%;
-  padding: 5px 10px;
-}
-.email-field {
-  width: 80%;
-}
-.email-field:focus {
-  box-shadow: none !important;
-  outline: none;
-}
-.email-btn {
-  width: 15%;
+.footer-desc {
+  text-align: justify;
 }
 .footer-list {
   list-style-type: none;

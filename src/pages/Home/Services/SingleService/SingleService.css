@@ -6,11 +6,12 @@
   height: 425px;
   position: relative;
   border-radius: 15px;
+  transition: 0.5s;
   box-shadow: 0 0 9px rgb(187, 186, 186);
 }
 .serviceCard:hover {
   box-shadow: 0 0 6px rgb(187, 186, 186);
-  transform: translateY(-10px);
+  transform: translateY(-20px);
   transition: 0.5s;
 }
 .serviceShortDesc {
