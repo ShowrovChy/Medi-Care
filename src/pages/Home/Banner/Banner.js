@@ -57,7 +57,13 @@ const Banner = () => {
               practical experience and training courses.
             </p>
             <div>
-              <Button className="carousel-btn btn-one "> About us</Button>
+              <Button
+                onClick={handleAboutBtn}
+                className="carousel-btn btn-one "
+              >
+                {" "}
+                About us
+              </Button>
               <Button className="carousel-btn btn-two ">Book</Button>
             </div>
           </Carousel.Caption>
@@ -78,7 +84,10 @@ const Banner = () => {
               innovative diagnosis.
             </p>
             <div>
-              <Button className="carousel-btn btn-one"> About us</Button>
+              <Button onClick={handleAboutBtn} className="carousel-btn btn-one">
+                {" "}
+                About us
+              </Button>
               <Button className="carousel-btn btn-two"> Book</Button>
             </div>
           </Carousel.Caption>
