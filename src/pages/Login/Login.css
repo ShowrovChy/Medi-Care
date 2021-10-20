@@ -25,6 +25,7 @@
 .iconStyle {
   width: 40px;
   margin-right: 4px;
+  border-radius: 50%;
 }
 .gg-icon {
   width: 37px;
