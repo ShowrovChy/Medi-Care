@@ -24,6 +24,8 @@
   color: rgb(44, 44, 44);
   text-decoration: none;
   margin-left: 3px;
+  border-bottom: 2px solid transparent;
+
   transition: 0.5s;
 }
 .serviceList > li:hover a {
