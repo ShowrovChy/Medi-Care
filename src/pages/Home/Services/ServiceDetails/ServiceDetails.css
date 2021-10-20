@@ -32,3 +32,9 @@
   margin-left: 10px;
   transition: 0.5s;
 }
+
+@media only screen and (max-width: 768px) {
+  .serviceBanner {
+    display: none;
+  }
+}
