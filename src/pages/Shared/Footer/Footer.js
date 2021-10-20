@@ -46,7 +46,7 @@ const Footer = () => {
         </Col>
         <Col className="mt-4">
           <h4 className="text-info mb-4">Services</h4>
-          <ul className="footer-list">
+          <ul className="footer-list ul-p">
             <li>Support</li>
             <li>
               <Link to="/about" className="footerLink">
@@ -60,7 +60,7 @@ const Footer = () => {
         </Col>
         <Col className="mt-4">
           <h4 className="text-info">Quick Links</h4>
-          <ul className="footer-list">
+          <ul className="footer-list ul-p">
             <li>Specialist Doctors</li>
             <li>Online Booking</li>
             <li>Blogs</li>
@@ -73,7 +73,7 @@ const Footer = () => {
         </Col>
         <Col className="mt-4">
           <h4 className="text-info">Contact Us</h4>
-          <ul className="footer-list">
+          <ul className="footer-list ul-p">
             <li>+1 1634 53 759</li>
             <li>+5 1554 56 858</li>
             <li>info@medicare.com</li>

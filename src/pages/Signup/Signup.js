@@ -11,15 +11,24 @@ const Signup = () => {
   const { handleUserRegistration, error, setUserName } = useAuth();
   // setUserName
   setUserName(name);
+
+  // Get and Set User Name
   const handleName = (e) => {
     setName(e.target.value);
   };
+
+  // Get and Set User Email
+
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
+
+  // Get and Set User password
+
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
+
   const handleRegistration = (e) => {
     e.preventDefault();
     handleUserRegistration(email, password);

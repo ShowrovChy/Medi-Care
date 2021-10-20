@@ -65,3 +65,10 @@ li:hover {
 .footerLink:hover {
   color: #00e6e6;
 }
+ul > li {
+  transition: 0.5s;
+}
+ul > li:hover {
+  padding-left: 10px;
+  transition: 0.5s;
+}

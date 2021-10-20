@@ -5,6 +5,7 @@ import "./Login.css";
 import google from "../../images/icon/google.png";
 import github from "../../images/icon/github.png";
 import { Link } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 const Login = () => {
   const {
     logInUsingGoogle,
@@ -12,21 +13,42 @@ const Login = () => {
     handleUserLoginWithEmail,
     error,
   } = useAuth();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState();
+  const location = useLocation();
+  const history = useHistory();
+  const redirect_uri = location.state?.from || "/home";
 
+  // Handle User Login With Google and Redirect
+
+  const handleGoogleSignIn = () => {
+    logInUsingGoogle()?.then((result) => {
+      history.push(redirect_uri);
+    });
+  };
+
+  // Handle User Login With Github and Redirect
+  const handleGithubSignIn = () => {
+    logInUsingGithub().then((result) => {
+      history.push(redirect_uri);
+    });
+  };
+  // Get and Set User Email
   const handleEmail = (e) => {
     setEmail(e.target.value);
   };
 
+  // Get and Set User Password
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
 
+  // Handle User Login With Email and Password
   const handleLoginWithEmail = (e) => {
     e.preventDefault();
-    handleUserLoginWithEmail(email, password);
+    handleUserLoginWithEmail(email, password).then((result) => {
+      history.push(redirect_uri);
+    });
   };
   window.scroll(0, 0);
   return (
@@ -70,7 +92,8 @@ const Login = () => {
         <h3 className="orStyle text-center">-----------or-----------</h3>
         <div className="text-center mt-3">
           <Button
-            onClick={logInUsingGoogle}
+            onClick={handleGoogleSignIn}
+            // onClick={logInUsingGoogle}
             className="bg-primary border-0 mx-1 p-0 link-btn"
           >
             {" "}
@@ -78,7 +101,8 @@ const Login = () => {
             Google login
           </Button>
           <Button
-            onClick={logInUsingGithub}
+            onClick={handleGithubSignIn}
+            // onClick={logInUsingGithub}
             className="bg-dark border-0 mx-1  p-0 link-btn"
           >
             <img className="iconStyle" src={github} alt="" />

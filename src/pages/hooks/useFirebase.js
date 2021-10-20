@@ -10,6 +10,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+
 import initializeAuthentication from "../Login/Firebase/firebase.init";
 
 initializeAuthentication();
@@ -27,17 +28,9 @@ const useFirebase = () => {
 
   const logInUsingGoogle = () => {
     setError("");
+
     setIsLoading(true);
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    return signInWithPopup(auth, googleProvider);
   };
 
   //   github login
@@ -45,17 +38,9 @@ const useFirebase = () => {
   const logInUsingGithub = () => {
     setError("");
     setIsLoading(true);
-    signInWithPopup(auth, githubProvider)
-      .then((result) => {
-        setUser(result.user);
-      })
-      .catch((error) => {
-        setError(error.message);
-      })
-      .finally(() => {
-        setIsLoading(false);
-      });
+    return signInWithPopup(auth, githubProvider);
   };
+
   // Observe User State
 
   useEffect(() => {
@@ -71,6 +56,7 @@ const useFirebase = () => {
   }, []);
 
   // Create New User
+
   console.log(userName);
   const handleUserRegistration = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
@@ -103,6 +89,9 @@ const useFirebase = () => {
     user,
     error,
     isLoading,
+    setUser,
+    setError,
+    setIsLoading,
     setUserName,
     logInUsingGoogle,
     logInUsingGithub,
